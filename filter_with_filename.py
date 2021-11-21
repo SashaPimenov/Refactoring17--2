@@ -3,6 +3,14 @@ import numpy as np
 
 
 def get_mosaic(image, size, gradation):
+    '''
+    Принимает изображение и применяет к нему фильтр, которые делает из неё чёрно-белый пиксель-арт
+
+    :param image: сходное изображение
+    :param size: размер мозаики
+    :param gradation: размер градации
+    :return: новое изображение
+    '''
     image_arr = np.array(Image.open(image)).astype(int)
     limit = 255 // gradation
     image_len = len(image_arr)
@@ -21,6 +29,16 @@ def get_mosaic(image, size, gradation):
 
 
 def set_color(new_c, matrix, size, i, j):
+    """
+    Принимает размер мозаики и устанавливает новый цвет пикселя
+
+    :param new_c: новый цвет пикселя
+    :param matrix: матрица изоражения
+    :param size: размер мозаики
+    :param i: пиксль по оси x
+    :param j: пиксель по оси y
+    :return: устанавливает новый цвет пикселя
+    """
     for x in range(i, i + size):
         for y in range(j, j + size):
             for z in range(3):

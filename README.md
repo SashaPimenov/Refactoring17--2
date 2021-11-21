@@ -19,3 +19,5 @@
 ![](res1.jpg)
 ### Результирующее изображение ***old_filter.py***:
 ![](res.jpg)
+
+## Doc-тестов пока нет, но есть Docsting'и в ***filter_with_filename.py***
